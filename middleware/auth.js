@@ -1,5 +1,8 @@
 /** Middleware for handling req authorization for routes. */
 
+// {"username":"hunter",
+// "password": "hello"}
+
 const jwt = require("jsonwebtoken");
 const { SECRET_KEY } = require("../config");
 
@@ -45,5 +48,5 @@ function ensureCorrectUser(req, res, next) {
 module.exports = {
   authenticateJWT,
   ensureLoggedIn,
-  ensureCorrectUser
+  ensureCorrectUser,
 };
